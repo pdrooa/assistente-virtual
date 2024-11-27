@@ -1,14 +1,9 @@
 # Assistente virtual
-Este projeto é um programa com interface gráfica desenvolvido em python, que permite o usuário a ter um assistente pessoal inteligente para te auxiliar nas suas duvidas do dia a dia. Utiliza a biblioteca tkinter para a interface gráfica, a biblioteca SpeechRecognition o reconhecimento da fala.
+Este projeto é um programa com interface gráfica desenvolvido em python, que permite o usuário a ter um assistente virtual inteligente para te auxiliar nas suas duvidas do dia a dia. Utiliza a biblioteca tkinter para a interface gráfica, a biblioteca SpeechRecognition o reconhecimento da fala e a api do google gemini.
 
 
-Pré-requisitos
-pip install pyaudio
-pip install SpeechRecognition
-pip install standard-aifc  (para python 3.13)
-pip install pyttsx3
-pip install -q -U google-generativeai
-pip install python-dotenv
+## Pré-requisitos
+
 
 Como Usar
 Ao executar o aplicativo, uma janela será exibida com a mensagem "Clique para falar com a IA" e um círculo azul.
