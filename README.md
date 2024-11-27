@@ -34,4 +34,4 @@ Crie um arquivo .env no diretório do projeto e adicione sua chave da API da Goo
 ```bash
 API_KEY=(sua api)
 ```
-**Nota: A chave da API pode ser obtida através da Google Cloud Console, criando um novo projeto e habilitando a API desejada.**
+**Nota: A chave da API pode ser obtida através da [`Google AI for Developers`](https://ai.google.dev/), criando um novo projeto e habilitando a API desejada.**
