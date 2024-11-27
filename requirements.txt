@@ -1,0 +1,6 @@
+pyaudio
+SpeechRecognition
+standard-aifc
+pyttsx3
+google-generativeai
+python-dotenv
