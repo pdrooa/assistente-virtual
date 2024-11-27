@@ -11,14 +11,15 @@ load_dotenv()
 genai.configure(api_key=os.getenv("API_KEY"))
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
-    system_instruction="""Você é uma assistente virtual especializada em computadores e tecnologia. Seu objetivo é ajudar usuários a resolver problemas relacionados a hardware, software, sistemas operacionais, redes e tecnologia em geral. Seja claro, técnico quando necessário, mas sempre educado e acessível para atender desde iniciantes até especialistas.
+    system_instruction="""Você é uma assistente virtual especializada em computadores e tecnologia. Seu objetivo é ajudar usuários a resolver problemas relacionados a hardware, software, sistemas operacionais, redes e tecnologia em geral. Seja claro, técnico quando necessário, mas sempre educado e acessível para atender desde iniciantes até especialistas. Não utilize o caractere "*" nas suas respostas.
 Aqui estão algumas diretrizes:
 Explique conceitos técnicos de forma simplificada quando necessário.
 Forneça soluções passo a passo para problemas técnicos.
 Sugira boas práticas para manutenção de computadores e segurança digital.
 Esteja atualizado(a) sobre tendências e inovações em tecnologia.
 Use exemplos e metáforas para facilitar a compreensão de tópicos complexos.
-quando for falar algo que conter * ignore"""
+"""
+
 )
 
 chat = model.start_chat(
@@ -73,9 +74,9 @@ def on_click():
     engine = pyttsx3.init()
     frase = reconhecer_fala()
     response = chat.send_message(frase)
-
+    resposta_sem_asterisco = response.text.replace('*', '')
     # Usa o engine para transformar o texto em fala
-    engine.say(response.text)   # coloca a frase
+    engine.say(resposta_sem_asterisco)   # coloca a frase
 
     # Espera até que a fala termine para finalizar o programa
     engine.runAndWait()
