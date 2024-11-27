@@ -13,15 +13,25 @@ Este projeto é uma **assistente virtual baseada em inteligência artificial**, 
 
 - **Python**: Linguagem de programação principal.
 - **Bibliotecas**:
-  - [`Tkinter`](https://docs.python.org/3/library/tk.html): Interface gráfica.
-  - [`speech_recognition`](https://pypi.org/project/SpeechRecognition/): Reconhecimento de voz.
-  - [`pyttsx3`](https://pypi.org/project/pyttsx3/): Síntese de fala.
-  - [`google-generativeai`](https://github.com/google/generative-ai-python): Interface para a API generativa do Google.
+  - [`Tkinter`](https://docs.python.org/3/library/tk.html): Utilizada para a construção da interface gráfica..
+  - [`speech_recognition`](https://pypi.org/project/SpeechRecognition/): Captura e converte áudio em texto.
+  - [`pyttsx3`](https://pypi.org/project/pyttsx3/): Converte o texto gerado pela IA em áudio.
+  - [`google-generativeai`](https://github.com/google/generative-ai-python): Biblioteca que interage com a API generativa do Google para respostas inteligentes.
   - [`python-dotenv`](https://pypi.org/project/python-dotenv/): Gerenciamento de variáveis de ambiente.
 
 ## 🚀 Como Usar
+Ao executar o aplicativo, uma janela será exibida com a mensagem "Clique para falar com a IA" e um círculo azul.
+Clique no círculo azul para iniciar o reconhecimento de fala.
+A interface exibirá "Estou ouvindo..." enquanto captura o áudio. Após o reconhecimento, a ia irá responder de forma falada ao usuário 
 
 ### 1. **Pré-requisitos**
 Certifique-se de que tem o Python instalado e as bibliotecas necessárias. Instale-as com:
 ```bash
 pip install -r requirements.txt
+```
+### 2. **Configuração da API Key**
+Crie um arquivo .env no diretório do projeto e adicione sua chave da API da Google Generative AI da seguinte maneira:
+```bash
+API_KEY=(sua api)
+```
+**Nota: A chave da API pode ser obtida através da Google Cloud Console, criando um novo projeto e habilitando a API desejada.**
